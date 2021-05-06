@@ -1,0 +1,39 @@
+                                                                 Chapter 3.ACCESSING FILES
+  
+-To view files permissions & ownership on the file & directory use 'ls -al' command
+       Suppose the output is in following form ,
+           dr-xr-x---.  4 root root 4096 Jul 25  2019 .
+           dr-xr-xr-x. 18 root root 4096 Jul 25  2019 ..
+           -rw-r--r--.  1 root root   18 Dec 29  2013 .bash_logout
+           -rw-r--r--.  1 root root  176 Dec 29  2013 .bash_profile
+           -rw-r--r--.  1 root root  176 Dec 29  2013 .bashrc
+           -rw-r--r--.  1 root root  100 Dec 29  2013 .cshrc
+           -rw-r--r--.  1 root root    0 Nov 19  2017 .hushlogin
+           -rw-------.  1 root root 2150 Nov 19  2017 original-ks.cfg
+           drwxr-----.  3 root root 4096 Jul 25  2019 .pki
+           drwxr-xr-x.  2 root root 4096 Nov 19  2017 .ssh
+           -rw-r--r--.  1 root root  129 Dec 29  2013 .tcshrc 
+    Here if the first letter is d then it represents it is directory else it represents ther files.
+    There are following representetion for the permissions-
+         r - read(4)      w - write(2)      x - execute(1)
+    First three are for the owner permisssion , next theree are for the group permission ,last three are for the others permission.
+      No Permission	               ---
+	    Execute	                     --x
+	    Write	                       -w-
+	    Execute + Write	             -wx
+	    Read	                       r--
+	    Read + Execute	             r-x
+	    Read + Write	               rw-
+	    Read + Write +Execute	       rwx  
+-Commands for permissions and accessing the the files.
+    =>chmod - chmod stands for change mode used to change the permissions associated with the files.
+        Suppose we are provided the following information about the file
+              -rw-------.  1 root root 2150 Nov 19  2017 myfile.txt
+               From this information we can conclude that , owner is having permission for read & write, groups and others are not havving any permissions.
+                       Suppose we are asked to change permissions for the above file as following we have to assign all permissions for the user, 
+                       read & write permission for the 
+                       groups & only read permission for the others.Then we will make the command execute in the following order:
+                              'chmod 751 myfile.txt'
+    =>chown -used to change the owner of the file 
+            Example, suppose we have the owner of file from root to rohit then we will use command in the following way.
+                       sudo chown rohit :: admin myfile.txt 
