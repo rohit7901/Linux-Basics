@@ -37,3 +37,25 @@
     =>chown -used to change the owner of the file 
             Example, suppose we have the owner of file from root to rohit then we will use command in the following way.
                        sudo chown rohit :: admin myfile.txt 
+		                                                                                                   
+														   
+														   
+														   
+	                                                  Chapter 4.SELinux Security
+-SELinux stands for Security Enhanced Linux
+-It is the security architecture for Linux systems
+-It allows administrators to have more control on who can access the system .
+
+Modes of SELinux -
+   1.Disabled - In this mode no SELinux policy is loaded.
+   2.Enabled 
+       A.Active- security policy is enforced in this type of mode.
+       B.Permissive- In permissive mode instead of enforcing security policy, it prints warnings.
+
+Commands- 
+1. getinforce - to enforce the privacy policy
+2. sestatus - to get information about the current status of SELinux 
+
+To ENABLE/DISABLE SELinux follow the following steps :
+   1. vi /etc/se
+   2. vi /etc/selinux/config     After this it will enable you to change the mode of SELinux.
