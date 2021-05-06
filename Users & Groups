@@ -1,0 +1,26 @@
+                                               Chapter 2. USERS & GROUPS 
+1.Introduction
+ -Users in Linux plays an important role in the efficient management of the privileges 
+ -Also users allow sysadmin to manage the file permission while file sharing.
+ -Sudo User-
+     -Basically sudo user is a tool that allows users & groups to have access to commands they normally would not able to access.
+     -sudo enables user to have administration privilliges without logging in directly as a root user.
+ -Group is a collection of specific users
+    1.Primary Group-
+       - it is the default group that user belongs to
+       - this is generally stored in /etc/passwd file
+    2.Secondary Group-
+       - once the user is created with the primary group it can be added to the other groups.
+       - generally stored in /etc/group file
+2.Commands 
+    1.useradd - to add user
+         Example, useradd ROHIT =>it will add user as 'ROHIT'
+    2.cat /etc/passwd - to confirm wheather the user is added or not
+    3.passwd ROHIT - to assign the password to user ROHIT 
+    4.su - to switch user
+         Example, su -yash => this will switch user to yash
+    5.groupadd - to add group
+    6.groupdel - to delete group
+    7.usermod -aG admin ROHIT => This is used to append user to the secondary group.
+    8.id ROHIT - to get information about user and its group
+      
