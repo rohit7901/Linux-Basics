@@ -1,0 +1,71 @@
+                                                             Chapter 1 – Linux File System
+1.1 Introduction
+         Linux file system manages the file name, file size, creation date and more information about the file. 
+         It is mainly consists of the root directory and its sub directories.It also helps to arrange the data storage.
+
+
+1.2 Basic Commands -
+    pwd - pwd stands for present working directory used to get information about current directory
+    cd - it is used for changing the directory 
+    ls - used to list the files present in the current directory 
+    touch file_name - to create file name 
+            Example, touch myfile.txt - it will create the text file with name of myfile
+    echo "hello" >> filename.txt - this will insert text 'hello' in the given file
+    cat file_name - used to display content of the given file
+            Example, cat filename.txt
+            Output =>  hello
+    cp -r - used to copy all files recursively.
+    mv - to rename the file 
+            Example,  mv filename.txt myfile.txt
+    rm - to remove files
+    head - to get info about top files instead of all files
+            Example, ls |head -5 => it will list down top 5 files
+    tail - similar as head but instead of top files it will list down last files 
+    ping - used to check the working of the network
+    top - it is used to get the usage of CPU 
+    uname - this command will give you the the current version of Linux that you are using 
+    vi - a text editor basically.After opening vi press i to perform the insert operation then press ESCAPE to return to the command line then type wq to save and exit 
+    cd / - to shift to root user 
+    mkdir - to make a directory
+    rmdir - used to remove an empty directory  
+
+
+1.3 About directories and its types-
+ 
+ Now lets focus on the types of directories :-
+     1./bin - this is the directory that command & some of the applications and programs you can run.
+     2./boot - it contains the boot files that are required to start device.
+     3./dev - device files are stored in this directory likewise if hard disk or other devices are monuted then information about that mounted device will be stored here.
+     4./etc - in /etc directory the system configuration is present.
+     5./home - /home directory will contain user's personal directories.
+     6./lib - this /lib directory will provide libraries for the commands.
+     7./media - it is the directory where the external storage will be mounted when plugged in.
+     8./mnt - directory where we maunally mount storage or partitions.
+     9./opt - acts like extra hard disk
+     10./proc - it is the virtual directory which stores the information of CPU & Kernel process.
+     11./root - known as the home directory of the Administrator .
+     12./temp - directory used when system boots and you need to use temp space
+     13./usr - contains unique system resources 
+     14./var - used to store data that changes frequently. 
+ 
+         
+1.4 Soft Links Vs Hard Links 
+    ln - command used to link files
+    ln -li = it will show the inode number.
+    df -h => it will give information about the file system with memory usage and mounted directory for the file.
+    
+    Hard Link 
+     1.Hard links are having the same inode number pointing to the same file.
+     2.These cannot be used on directories.
+     3.Example, ln source.txt hardlink.txt it will create hard link for the given file
+     
+    Soft Links 
+     1.Commonly known as symbolic link.
+     2.Have capacity to link files on diffrent systems.
+     3.Can be used on directory.
+     4.Example, ls -s source.txt softlink.txt => this will create soft link for the file
+
+
+
+
+
