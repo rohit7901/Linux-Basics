@@ -25,7 +25,8 @@ There are diffrent package management systems for the diffrent distribution of t
 3.COMMANDS FOR PACKAGE MANAGEMENT -
 	
 Instead of concentrating on all of the linux distributions we will focus on the package management for the Red Hat Linux based distribution.In Red Hat-based distribution,the ``YUM`` is package management system for nstalling, updating, removing, and managing software packages.
-	The general syntax for the package management commands is ``yum -option command package_name``.
+	
+The general syntax for the package management commands is ``yum -option command package_name``.
 	
 Following are the commands listed for the Package Management :
 		
