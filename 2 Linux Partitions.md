@@ -79,4 +79,4 @@ STEP 8.In step 8 we have to restart the daemon service using command ``systemctl
 STEP 9.Now we have to mount the partition on the directory.
 			Use command ``df -h`` to check whether directory is mounted or not.
 		
-STEP 10.Reboot the system.
+
